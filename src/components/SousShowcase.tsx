@@ -37,10 +37,10 @@ const SousShowcase = () => {
   ];
 
   const stats = [
-    { number: '500K+', label: 'Active Users' },
-    { number: '2M+', label: 'Recipes Generated' },
+    { number: '1K+', label: 'Active Users' },
+    { number: '100K+', label: 'Recipes Generated' },
     { number: '4.8', label: 'App Store Rating' },
-    { number: '95%', label: 'User Satisfaction' }
+    { number: '100%', label: 'User Satisfaction' }
   ];
 
   return (
@@ -82,9 +82,9 @@ const SousShowcase = () => {
           >
             <div className="relative mx-auto w-80 h-[600px] bg-slate-800 rounded-[3rem] border-8 border-slate-700 shadow-2xl">
               {/* Phone screen */}
-              <div className="absolute inset-4 bg-gradient-to-br from-slate-900 to-slate-800 rounded-[2rem] overflow-hidden">
+              <div className="absolute inset-4 rounded-[2rem] overflow-hidden">
                 {/* Status bar */}
-                <div className="h-8 bg-slate-900 flex items-center justify-between px-6 text-white text-sm">
+                <div className="absolute top-0 left-0 right-0 h-8 bg-black/20 backdrop-blur-sm flex items-center justify-between px-6 text-white text-sm z-10">
                   <span>9:41</span>
                   <div className="flex space-x-1">
                     <div className="w-4 h-2 bg-white rounded-sm" />
@@ -94,44 +94,12 @@ const SousShowcase = () => {
                 </div>
                 
                 {/* App content */}
-                <div className="p-6 h-full bg-gradient-to-br from-emerald-50 to-blue-50">
-                  <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-2xl mx-auto mb-3 flex items-center justify-center">
-                      <ChefHat className="text-white" size={32} />
-                    </div>
-                    <h3 className="text-slate-800 font-bold text-xl">Sous</h3>
-                    <p className="text-slate-600 text-sm">AI Kitchen Assistant</p>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <div className="bg-white rounded-xl p-4 shadow-sm">
-                      <div className="flex items-center space-x-3 mb-2">
-                        <Brain className="text-emerald-500" size={20} />
-                        <span className="text-slate-800 font-medium">Recipe Suggestion</span>
-                      </div>
-                      <p className="text-slate-600 text-sm">Mediterranean Pasta with available ingredients</p>
-                    </div>
-                    
-                    <div className="bg-white rounded-xl p-4 shadow-sm">
-                      <div className="flex items-center space-x-3 mb-2">
-                        <Clock className="text-blue-500" size={20} />
-                        <span className="text-slate-800 font-medium">Cooking Timer</span>
-                      </div>
-                      <p className="text-slate-600 text-sm">Pasta: 8 minutes remaining</p>
-                    </div>
-                    
-                    <div className="bg-white rounded-xl p-4 shadow-sm">
-                      <div className="flex items-center space-x-3 mb-2">
-                        <Star className="text-yellow-500" size={20} />
-                        <span className="text-slate-800 font-medium">Meal Rating</span>
-                      </div>
-                      <div className="flex space-x-1">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} size={16} className="text-yellow-400 fill-current" />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+                <div className="h-full">
+                  <img
+                    src="/Untitled design (10).png"
+                    alt="Sous App Screenshot"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               
@@ -232,11 +200,14 @@ const SousShowcase = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <motion.button
+                onClick={() => window.open('https://apps.apple.com/us/app/sous-ai-recipe-assistant/id6747099098', '_blank')}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center justify-center space-x-3 bg-slate-900 text-white px-6 py-4 rounded-2xl hover:bg-slate-800 transition-all duration-300"
               >
-                <Smartphone size={24} />
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
+                  📱
+                </div>
                 <div className="text-left">
                   <div className="text-xs text-slate-400">Download on the</div>
                   <div className="font-semibold">App Store</div>
@@ -244,11 +215,14 @@ const SousShowcase = () => {
               </motion.button>
 
               <motion.button
+                onClick={() => window.open('https://play.google.com/store/apps/details?id=com.sous&pcampaignid=web_share', '_blank')}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center justify-center space-x-3 bg-slate-900 text-white px-6 py-4 rounded-2xl hover:bg-slate-800 transition-all duration-300"
               >
-                <Download size={24} />
+                <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
+                  📲
+                </div>
                 <div className="text-left">
                   <div className="text-xs text-slate-400">Get it on</div>
                   <div className="font-semibold">Google Play</div>
