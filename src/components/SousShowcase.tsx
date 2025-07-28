@@ -84,7 +84,7 @@ const SousShowcase = () => {
               <img
                 src="/Recipe Screenshot.png"
                 alt="Sous App Screenshot"
-                className="w-full h-auto rounded-3xl shadow-2xl border border-slate-700/50"
+                className="w-full h-auto rounded-3xl shadow-2xl"
               />
             </div>
             
