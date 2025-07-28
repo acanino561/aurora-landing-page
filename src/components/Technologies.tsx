@@ -21,7 +21,7 @@ const technologies = [
 
 const Technologies = () => {
   return (
-    <section id="technologies" className="py-32 relative bg-slate-950">
+    <section id="technologies" className="py-32 relative">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

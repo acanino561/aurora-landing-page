@@ -44,7 +44,7 @@ const SousShowcase = () => {
   ];
 
   return (
-    <section id="sous" className="py-32 relative overflow-hidden bg-slate-950">
+    <section id="sous" className="py-32 relative overflow-hidden">
       
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
