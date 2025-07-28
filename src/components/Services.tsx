@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   Smartphone, 
   Globe, 
@@ -13,36 +14,42 @@ import {
 const services = [
   {
     icon: Globe,
+    slug: 'web-development',
     title: 'Web Development',
     description: 'Modern, responsive web applications built with cutting-edge frameworks and optimized for performance.',
     features: ['React/Next.js', 'TypeScript', 'Progressive Web Apps', 'SEO Optimization']
   },
   {
     icon: Smartphone,
+    slug: 'mobile-development',
     title: 'Mobile Development',
     description: 'Native and cross-platform mobile apps that deliver exceptional user experiences across all devices.',
     features: ['React Native', 'Flutter', 'iOS/Android', 'App Store Optimization']
   },
   {
     icon: Brain,
+    slug: 'ai-machine-learning',
     title: 'AI & Machine Learning',
     description: 'Intelligent solutions powered by artificial intelligence to automate processes and gain insights.',
     features: ['Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'Custom AI Models']
   },
   {
     icon: Cloud,
+    slug: 'cloud-solutions',
     title: 'Cloud Solutions',
     description: 'Scalable cloud infrastructure and services to ensure your applications perform at their best.',
     features: ['AWS/Azure/GCP', 'Microservices', 'DevOps', 'Auto-scaling']
   },
   {
     icon: Database,
+    slug: 'data-engineering',
     title: 'Data Engineering',
     description: 'Robust data pipelines and analytics solutions to turn your data into actionable insights.',
     features: ['Big Data Processing', 'Real-time Analytics', 'Data Warehousing', 'ETL Pipelines']
   },
   {
     icon: Coins,
+    slug: 'blockchain-applications',
     title: 'Blockchain Applications',
     description: 'Decentralized applications and smart contracts that leverage blockchain technology for transparency and security.',
     features: ['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Web3 Integration']
@@ -102,10 +109,13 @@ const Services = () => {
                 ))}
               </ul>
 
-              <button className="flex items-center space-x-2 text-emerald-400 hover:text-blue-400 transition-colors duration-300 group">
+              <Link
+                to={`/services/${service.slug}`}
+                className="flex items-center space-x-2 text-emerald-400 hover:text-blue-400 transition-colors duration-300 group"
+              >
                 <span>Learn More</span>
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
+              </Link>
             </motion.div>
           ))}
         </div>
