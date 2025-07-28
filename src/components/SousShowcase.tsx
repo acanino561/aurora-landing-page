@@ -44,11 +44,9 @@ const SousShowcase = () => {
   ];
 
   return (
-    <section id="sous" className="py-32 relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-emerald-900/10 to-slate-900" />
+    <section id="sous" className="py-32 relative overflow-hidden bg-slate-950">
       
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
